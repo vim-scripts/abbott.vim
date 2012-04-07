@@ -1,6 +1,6 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=3774
 
-`abbott.vim` is an oddly-named dark Vim color scheme. It's primarily designed for editing files with a lot of plain text (i.e., TeX documents), but it should be fairly decent for other sorts of files as well. The color scheme draws on several sources, including memories of late nights spent working on real analysis homework and drinking copious amounts of Mountain Dew.
+abbott.vim is an oddly-named dark Vim color scheme. It's primarily designed for editing files with a lot of plain text (i.e., TeX documents), but it should be fairly decent for other sorts of files as well. The color scheme draws on several sources, including memories of late nights spent working on real analysis homework and drinking copious amounts of Mountain Dew.
 
 This color scheme is developed on GitHub. Please go there for the most up-to-date version. (https://github.com/bcat/abbott.vim)
 
@@ -10,10 +10,10 @@ Because hey, it's a color scheme! That's what you really want to see, right? (ht
 
 # Features & characteristics #
 
-* `abbott.vim` is a dark theme and only a dark theme.
-* `abbott.vim` is not a low contrast theme; however, does attempt to avoid excessive text contrast. Plain text is light green on dark brown rather than white on black.
-* `abbott.vim` supports all highlight groups featured in Vim 7.3, as well as the bad-whitespace (https://github.com/bitc/vim-bad-whitespace) plugin.
-* `abbott.vim` currently sets only GUI colors. Terminal users are encouraged to try it with the CSApprox (https://github.com/godlygeek/csapprox) plugin as this seems to give decent results.
+* abbott.vim is a dark theme and only a dark theme.
+* abbott.vim is not a low contrast theme; however, does attempt to avoid excessive text contrast. Plain text is light green on dark brown rather than white on black.
+* abbott.vim supports all highlight groups featured in Vim 7.3, as well as the bad-whitespace (https://github.com/bitc/vim-bad-whitespace) plugin.
+* abbott.vim currently sets only GUI colors. Terminal users are encouraged to try it with the CSApprox (https://github.com/godlygeek/csapprox) plugin as this seems to give decent results.
 
 # Future directions #
 
