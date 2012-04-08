@@ -2,7 +2,7 @@
 " Name: abbott.vim
 " Description: An oddly-named dark Vim color scheme
 " Maintainer: Jonathan Rascher <jon@bcat.name>
-" Version: 1.1.1
+" Version: 1.2
 
 " Mark abbott.vim as a dark theme.
 set background=dark
@@ -20,17 +20,17 @@ let g:colors_name="abbott"
 let g:CSApprox_hook_abbott_post="hi Normal ctermbg=NONE"
 
 " Define colors (blue).
-let s:pastel_blue="#8cbdda"
-let s:blue="#3f91e1"
+let s:pastel_blue="#8ccdea"
+let s:blue="#3f91f1"
 
 " Define colors (brown).
-let s:tan="#fdd182"
-let s:light_brown="#403324"
+let s:tan="#fee3b4"
+let s:light_brown="#816749"
 let s:brown="#1f1912"
 let s:dark_brown="#0a0806"
 
 " Define colors (green).
-let s:mint_green="#d7f2b6"
+let s:mint_green="#d5fac8"
 let s:pastel_green="#d8ff84"
 let s:lime_green="#94d900"
 let s:green="#76bc20"
@@ -40,7 +40,7 @@ let s:burnt_orange="#f63f05"
 let s:orange="#fbb32f"
 
 " Define colors (purple).
-let s:lavender="#eec0f7"
+let s:lavender="#e6a2f3"
 
 " Define colors (red).
 let s:pink="#ec6c99"
@@ -108,8 +108,8 @@ call s:H("CursorIM", { "opt": "reverse" })
 call s:H("CursorLine", { "bg": s:dark_brown })
 call s:H("CursorColumn", { "bg": s:dark_brown })
 
-" Lighten the background of the right margin.
-call s:H("ColorColumn", { "bg": s:light_brown })
+" Darken the background of the right margin.
+call s:H("ColorColumn", { "bg": s:dark_brown })
 
 " Highlight matched delimiters in a way that's clearly distinguishable from
 " unmatched delimiter/statement/preprocessor highlighting.
@@ -150,3 +150,6 @@ call s:H("DiffText", { "fg": s:brown, "bg": s:pastel_blue, "opt": "bold" })
 
 " Set up custom highlights for bad-whitespace.vim.
 call s:H("BadWhitespace", { "fg": s:brown, "bg": s:red })
+
+" Render TeX macros in preprocesor style. They are macros, after all. :P
+highlight link texStatement PreProc
