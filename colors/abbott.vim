@@ -2,7 +2,7 @@
 " Name: abbott.vim
 " Description: An oddly-named dark Vim color scheme
 " Maintainer: Jonathan Rascher <jon@bcat.name>
-" Version: 1.2
+" Version: 1.3
 
 " Mark abbott.vim as a dark theme.
 set background=dark
@@ -20,7 +20,7 @@ let g:colors_name="abbott"
 let g:CSApprox_hook_abbott_post="hi Normal ctermbg=NONE"
 
 " Define colors (blue).
-let s:pastel_blue="#8ccdea"
+let s:pastel_blue="#8ccdf0"
 let s:blue="#3f91f1"
 
 " Define colors (brown).
@@ -79,13 +79,14 @@ call s:H("Todo", { "fg": s:brown, "bg": s:orange })
 
 " Set up highlights for various UI elements.
 call s:H("ErrorMsg", { "fg": s:brown, "bg": s:red })
-call s:H("Folded", { "fg": s:brown, "bg": s:mint_green })
-call s:H("FoldColumn", { "fg": s:brown, "bg": s:mint_green })
+call s:H("Folded", { "fg": s:brown, "bg": s:pastel_blue })
+call s:H("FoldColumn", { "fg": s:brown, "bg": s:pastel_blue })
 call s:H("LineNr", { "fg": s:yellow })
 call s:H("ModeMsg", { "opt": "bold" })
 call s:H("MoreMsg", { "fg": s:blue, "opt": "bold" })
 call s:H("Pmenu", { "bg": s:dark_brown })
-call s:H("PmenuSel", { "fg": s:lavender, "bg": s:light_brown, "opt": "bold" })
+call s:H("PmenuSel",
+      \ { "fg": s:dark_brown, "bg": s:light_brown, "opt": "bold" })
 call s:H("PmenuSbar", { "bg": s:light_brown })
 call s:H("PmenuThumb", { "bg": s:blue })
 call s:H("Question", { "fg": s:pink, "opt": "bold" })
@@ -101,8 +102,8 @@ call s:H("WildMenu", { "fg": s:brown, "bg": s:mint_green })
 call s:H("VertSplit", { "fg": s:brown, "bg": s:mint_green })
 
 " Use plain old reverse video for the blinking cursor.
-call s:H("Cursor", { "opt": "reverse" })
-call s:H("CursorIM", { "opt": "reverse" })
+call s:H("Cursor", { "fg": "fg", "bg": "bg", "opt": "reverse" })
+call s:H("CursorIM", { "fg": "fg", "bg": "bg", "opt": "reverse" })
 
 " Darken the background of the current line and column.
 call s:H("CursorLine", { "bg": s:dark_brown })
@@ -114,7 +115,7 @@ call s:H("ColorColumn", { "bg": s:dark_brown })
 " Highlight matched delimiters in a way that's clearly distinguishable from
 " unmatched delimiter/statement/preprocessor highlighting.
 call s:H("MatchParen",
-      \ { "fg": s:lavender, "bg": s:light_brown, "opt": 'bold' })
+      \ { "fg": s:dark_brown, "bg": s:light_brown, "opt": 'bold' })
 
 " Set up highlights for imaginary `~` and `@` characters as well as special
 " keys.
@@ -151,5 +152,5 @@ call s:H("DiffText", { "fg": s:brown, "bg": s:pastel_blue, "opt": "bold" })
 " Set up custom highlights for bad-whitespace.vim.
 call s:H("BadWhitespace", { "fg": s:brown, "bg": s:red })
 
-" Render TeX macros in preprocesor style. They are macros, after all. :P
+" Render TeX macros in preprocessor style. They are macros, after all. :P
 highlight link texStatement PreProc
